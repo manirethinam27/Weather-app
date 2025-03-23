@@ -30,27 +30,7 @@ async function weather() {
         document.querySelector("#country").textContent = data.sys.country;
         document.querySelector("#humidity").innerText = data.main.humidity + "%";
         document.querySelector("#air").innerText = data.wind.speed + " km/h";
-        console.log(data.weather[0].main)
-        let weather = data.weather[0].main.toLowerCase();
-let appContainer = document.querySelector(".app-container");
-let icon = document.querySelector("#icon"); // Ensure the element exists
-
-if (weather === "clear") {
-    appContainer.style.background = "url('src/clearbg.png') no-repeat center/cover";
-    icon.src = "src/clear.png";
-} else if (weather === "rain") {
-    appContainer.style.background = "url('src/rainbg.png') no-repeat center/cover";
-    icon.src = "src/rain.png";
-} else if (weather === "mist") {
-    appContainer.style.background = "url('src/mistbg.png') no-repeat center/cover";
-    icon.src = "src/mist.png";
-} else if (weather === "drizzle") {
-    appContainer.style.background = "url('src/drizzlebg.png') no-repeat center/cover";
-    icon.src = "src/drizzle.png";
-} else if (weather === "clouds") {
-    appContainer.style.background = "url('src/cloudbg.png') no-repeat center/cover";
-    icon.src = "src/clouds.png";
-}
+        
     } catch (error) {
         console.error("Error fetching weather data:", error);
         alert("Failed to fetch weather data. Please check the city name or try again later.");
