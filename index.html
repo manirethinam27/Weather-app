@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Weather App 🌤️<hr></h1>
+        
+        <div class="search">
+            <input type="text" placeholder="Enter city name">
+            <button onclick="search()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+            </button>
+        </div>
+        
+        <div class="weather-box"> 
+            <img src="src/clear.png " alt="" height="150px" width="150px" id="icon"></img>
+            <h1 id="temp">20°c</h1>
+            <h1 id="city">city</h1>
+            <p id="country">country</p>
+            <div class="hs">
+                <div class="hbox">
+                    <img src="src/humidity.png" width="50px" height="50px" ></img>
+                    <div>
+                        <span id="humidity">100%</span>
+                        <h3>Humidity</h3>
+                    </div>
+                </div>
+                
+                <div class="wbox">
+                    <img src="src/wind.png" width="50px" height="50px" alt="">
+                    <div>
+                        <span id="air">12 km/h</span>
+                        <h3>Air speed</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- precipitation, clouds, pressure, temperature, and wind.  -->
